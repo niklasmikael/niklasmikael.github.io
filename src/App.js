@@ -1,16 +1,39 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Guild from "./pages/Guild";
+import Rules from "./pages/Rules";
+import Board from "./pages/Board";
+import Office from "./pages/Office";
+import Contact from "./pages/Contact";
+import ErrorPage from "./pages/ErrorPage";
+import Company from "./pages/Company";
 
-function App() {
+
+
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello from V2</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="kilta" element={<Guild />} />
+          <Route path="saannot" element={<Rules />} />
+          <Route path="hallitus" element={<Board />} />
+          <Route path="toimisto" element={<Office />} />
+          <Route path="yrityksille" element={<Company />} />
+          <Route path="yhteystiedot" element={<Contact />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));

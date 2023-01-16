@@ -1,0 +1,482 @@
+$button-color: hsl(73, 97%, 59%);
+$main-color: black;
+$main-color2: hsl(73, 97%, 39%);
+$footer-color: #27292b;
+
+$bg-color-lg: rgb(164, 162, 162);
+$nav-color: black;
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../monument-font/MonumentExtended-Regular.otf) format('opentype');
+}
+
+
+
+html, body {
+
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #27292b;
+
+    h1, h2 {
+            
+        font-family: 'Open Sans', sans-serif;
+        
+    }
+
+    
+  }
+
+
+
+//  Navbar css
+
+.nav-top-logo {
+    display: flex;
+    justify-content: center;
+    margin-right: 10rem;
+    
+ }
+
+
+nav {
+    
+    
+    //background-color: $main-color;
+    background-color: $main-color;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 0 10px black;;
+
+    
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 0 2rem;
+
+        
+
+       
+
+       
+
+        .nav-list-item, .nav-list-trok {
+            list-style: none;
+            font-weight: bold;
+            position: relative;
+            padding: 1.5rem 1rem;
+            background-color: $button-color;
+            box-shadow: 2px 2px 3px 2px green;
+            cursor: pointer;
+            
+
+            &:hover ul {
+                visibility: visible;
+                margin-top: 10px;
+                background-color: $main-color;
+                
+                li {
+                    background-color: $button-color;
+                    box-shadow: 1px 1px black;
+                    // TODO: Menee yrityksille napin päälle, korjaa
+                }
+            }
+
+            
+
+            
+
+            .nav-list-dropdown {
+                position: absolute;
+                background-color: white;
+                top: 4rem;
+                left: -1rem;
+                width: 12rem;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                visibility: hidden;
+                transition: 200ms ease-in-out;
+                box-shadow: 0 0 10px $main-color2;
+
+                li {
+                    list-style: none;
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+//  Button css
+button {
+    background: $button-color;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 1em 3em 1em 3em;
+    border-style: none;
+    color: black;
+    box-shadow: 1px 1px 1px 1px;
+    cursor: pointer;
+
+    &:hover {
+        transition: all .5s;
+        transform: scale(1.1)
+    }
+
+}
+
+// Slider-component
+
+.container {
+    .logobar {
+        display: flex;
+        margin-top: 5rem;
+        
+    }
+}
+
+//  Container in every page
+.container {
+    margin: 3rem 5rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+// Home page
+
+hr {
+    margin-top: 5em;
+    width: 50%;
+    color: white;
+    size: 50px;
+    box-shadow: 0 0 10px $footer-color;
+    
+}
+
+.container {
+
+    .info {
+        display: flex;
+        flex-direction: row;
+
+        .info-text {
+            
+            margin-top: 5em;
+            width: 30rem;
+        }
+
+        .info-text-left {
+            text-align: left;
+        }
+        .info-text-right {
+            text-align: right;
+        }
+
+        .info-img {
+            margin-top: 5rem;
+        }
+
+        .left-img {
+            margin-right: 2rem;
+        }
+        .right-img {
+            margin-left: 2rem;
+        }
+    }
+
+    button a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+
+// Companies
+
+.companies {
+
+    display: flex;
+    justify-content: center;
+
+.company-text {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 16px;
+    width: 50vw;
+}
+}
+
+.container-company {
+    margin-right: 5rem;
+    margin-left: 5rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+    .company-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5rem;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: $button-color;
+        box-shadow: 0 0 20px $footer-color;
+        width: 30rem;
+
+        .companycard-title {
+            margin-top: 2rem;
+            height: 3em;
+        }
+
+        .description {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-top: 2rem;
+            height: 20em;
+        }
+
+        .cta-button {
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+    }
+}
+
+    
+
+    
+//  Board-page css for card container
+    .board-cards {
+        /*display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1.5rem;*/
+
+        
+
+        .pj {
+            display: flex;
+            justify-content: center;
+        }
+
+        .money {
+            display: flex;
+            justify-content: center;
+        }
+
+        .media-comm {
+            display: flex;
+            justify-content: center;
+        }
+
+        .events {
+            display: flex;
+            justify-content: center;
+        }
+
+        .others {
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
+
+    .guild-principles{
+        display: flex;
+        justify-content: center;
+        .guild-list {
+            p {
+                text-align: center;
+                
+            }
+        
+        ul {
+            li {
+                list-style-type: none;
+                text-align: left;
+                
+                
+            }
+        }
+        
+    }
+        
+    }
+
+    .open-hours{
+        
+        display: flex;
+        text-align: left;
+
+        .times {
+            margin-left: 1em;
+        }
+        
+    }
+    
+
+
+    
+
+
+
+
+
+
+//  Card-component
+.card {
+    width: 250px;
+    color:black;
+    padding: 1em;
+    border-radius: 4px;
+    margin: 1em;
+    background: $button-color;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+    box-shadow: 0 0 5px grey;
+    border-color: black;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .card-title {
+        height: 3em;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        
+        
+    }
+
+    .card-name-email {
+        
+        margin-top: 1.5em;
+        
+    }
+
+    #card-name {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+// Footer
+
+.footer { // Splittaa footer kolmeen osaan, teksti keskelle logot oikealle
+    margin-top: 10em;
+    background-color: $main-color;
+    bottom: 0;
+    position: relative;
+    color: white;
+    
+    
+
+    .footer-content {
+        
+
+        .footer-address {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-logos {
+            padding-left: 10rem;
+            img{
+                margin: 1em;
+                width: 50px;
+                height: 50px;
+        }
+        }
+
+
+       
+        
+
+        
+        
+            
+        }
+        
+    }
+    
+
+
+//Yhteydenottolomake
+
+.form {
+    margin-top: 3rem;
+    background-color: rgb(44, 43, 43);
+    color: whiteblack;
+    border-radius: .5rem;
+    border-width: 5px;
+    border-color: $main-color;
+    
+    
+    .form-fields {
+        display: flex;
+        flex-direction: column;
+        padding: 3em;
+        
+        
+
+        #input-name ,#input-subject, #input-email, #input-message, #contact-submit{
+            padding: .5rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+            
+            
+        }
+
+        #input-message {
+            width: 443px;
+            height: 132px;
+        }
+
+        button {
+            width: 50%;
+            align-self: center;
+        }
+
+        
+
+        
+
+       
+        
+        
+    }
+}
+
+
+
+// Facebook-upotus
+.fb-page, .fb_iframe_widget {
+    margin-top: 4em;
+    width: 500px;
+    height: 500px;
+}
+
+
