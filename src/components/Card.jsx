@@ -1,5 +1,5 @@
 import React from "react";
-import Niko from "../images/niko.png"
+
 
 function Card({title, name, email}) {
     return (

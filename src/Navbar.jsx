@@ -1,10 +1,25 @@
-import React from "react";
+import React, {useState } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import troklogo from "./images/trok-logo-white.png"
+import hamburger from "./images/hamburger-menu-icon-white.png"
+
 
 
 
 function Navbar() {
+
+const [isActive, setActive] = useState(false);
+
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
+
+  const [drop, setDrop] = useState(false);
+
+  const toggleDrop = () => {
+    console.log("Kissa")
+    setDrop(!drop);
+  }
 
     return(
 
@@ -18,19 +33,21 @@ function Navbar() {
 
             <div className="nav-top-logo">
 
-                <img width="443px" height="175px" src={troklogo}/>
+                <a href="/"><img width="443px" height="175px" src={troklogo}/></a>
 
             </div>
 
+
+
                 
             
-
+                <img onClick={toggleDrop} className={drop ? "hamburger-menu" : "hidden"} src={hamburger} alt="hamburger menu icon"/>
                 <li className="nav-list-item"><Link to="/">Etusivu</Link></li>
 
 
-                <li className="nav-list-trok"><Link to="/">TROK Ry</Link>
+                <li onClick={toggleClass} className="nav-list-trok"><a>TROK ry</a>
 
-                    <ul className="nav-list-dropdown">
+                    <ul className={isActive ? "nav-list-dropdown" : "hidden"}> {/*Toggles dropdown*/}
 
                     <li className="nav-list-item"><Link to="/kilta">Kilta</Link></li>
                     <li className="nav-list-item"><Link to="/saannot">Säännöt</Link></li>

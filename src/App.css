@@ -26,7 +26,6 @@ html h1, html h2, body h1, body h2 {
 
 nav {
   background-color: black;
-  color: white;
   font-family: 'Open Sans', sans-serif;
   -webkit-box-shadow: 0 0 10px black;
           box-shadow: 0 0 10px black;
@@ -62,25 +61,21 @@ nav .nav-list .nav-list-item, nav .nav-list .nav-list-trok {
   cursor: pointer;
 }
 
-nav .nav-list .nav-list-item:hover ul, nav .nav-list .nav-list-trok:hover ul {
-  visibility: visible;
-  margin-top: 10px;
-  background-color: black;
+nav .nav-list .nav-list-item .hidden, nav .nav-list .nav-list-trok .hidden {
+  display: none;
 }
 
-nav .nav-list .nav-list-item:hover ul li, nav .nav-list .nav-list-trok:hover ul li {
-  background-color: #d0fc31;
-  -webkit-box-shadow: 1px 1px black;
-          box-shadow: 1px 1px black;
+nav .nav-list .nav-list-item .hidden img, nav .nav-list .nav-list-trok .hidden img {
+  display: none;
 }
 
 nav .nav-list .nav-list-item .nav-list-dropdown, nav .nav-list .nav-list-trok .nav-list-dropdown {
   position: absolute;
-  background-color: white;
-  top: 4rem;
+  background-color: black;
+  top: 5rem;
   left: -1rem;
   width: 12rem;
-  padding: 1rem;
+  padding: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,11 +84,7 @@ nav .nav-list .nav-list-item .nav-list-dropdown, nav .nav-list .nav-list-trok .n
       -ms-flex-direction: column;
           flex-direction: column;
   gap: .5rem;
-  visibility: hidden;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
-  -webkit-box-shadow: 0 0 10px #9ac403;
-          box-shadow: 0 0 10px #9ac403;
+  visibility: visible;
 }
 
 nav .nav-list .nav-list-item .nav-list-dropdown li, nav .nav-list .nav-list-trok .nav-list-dropdown li {
@@ -143,6 +134,11 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.heroimg img {
+  max-width: 100%;
+  height: auto;
 }
 
 hr {
@@ -260,50 +256,7 @@ hr {
   padding-bottom: 2rem;
 }
 
-.board-cards {
-  /*display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 1.5rem;*/
-}
-
-.board-cards .pj {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.board-cards .money {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.board-cards .media-comm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.board-cards .events {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.board-cards .others {
+.container .board-cards .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,5 +404,75 @@ hr {
   margin-top: 4em;
   width: 500px;
   height: 500px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .nav-top-logo {
+    display: none;
+  }
+  nav {
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-box-shadow: 0 0 10px black;
+            box-shadow: 0 0 10px black;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+  nav .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: none;
+    margin: 0 2rem;
+  }
+  nav .nav-list .nav-list-item, nav .nav-list .nav-list-trok {
+    list-style: none;
+    font-weight: bold;
+    position: relative;
+    padding: 1.5rem 1rem;
+    background-color: black;
+    color: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    cursor: pointer;
+  }
+  nav .nav-list .nav-list-item .hidden, nav .nav-list .nav-list-trok .hidden {
+    display: none;
+  }
+  nav .nav-list .nav-list-item .nav-list-dropdown, nav .nav-list .nav-list-trok .nav-list-dropdown {
+    position: relative;
+    background-color: white;
+    top: 1rem;
+    left: -1rem;
+    width: 12rem;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: .5rem;
+    visibility: visible;
+    -webkit-box-shadow: 0 0 2px #9ac403;
+            box-shadow: 0 0 2px #9ac403;
+  }
+  nav .nav-list .nav-list-item .nav-list-dropdown li, nav .nav-list .nav-list-trok .nav-list-dropdown li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+  }
 }
 /*# sourceMappingURL=App.css.map */

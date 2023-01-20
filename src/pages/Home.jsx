@@ -1,16 +1,33 @@
 import React from 'react';
-import helmet from '../images/trok-kypara.png'
+import helmet from '../images/trok-logo-helmet.png'
 import { Link } from "react-router-dom";
 import Logobar from "../components/Logobar"
-
+import clouds from "../images/trok-clouds.png"
 
 
 function Home() {
 
 
+    
+
+
+
+    
+
+
     return(
+
+        <div>
+
+        <div className='heroimg'>
+            <img src={clouds} alt="picture of trok ry members"/>
+        </div>
         
         <div className="container"> 
+
+        
+
+        
 
 
                 <div className='info'>
@@ -56,7 +73,9 @@ function Home() {
 
                
 
-{/*Facebook embed*/}
+            {/*Facebook embed
+
+                
                 <div className='facebook-feed instagram-feed'>
 
                     <div class="fb-page" data-href="https://www.facebook.com/trokry" data-tabs="timeline" data-width="500" data-height="550" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
@@ -70,15 +89,21 @@ function Home() {
                 </div>
 
                 </div>
+
+                */}
            
                     
                     
          </div>
+         </div>
+
+         
         
 
                  
         
     )
+
 }
 
 export default Home;

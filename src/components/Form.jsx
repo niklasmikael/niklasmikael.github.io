@@ -1,7 +1,23 @@
 import React from "react";
 
 
-function Form(){
+class Form extends React.Component {
+
+    constructor(){
+        super();
+        this.state = {
+            
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+
+            
+
+        }
+    }
+
+    render(){
     return(
         <div className="form">
             <p>Yhteydenottolomake</p>
@@ -16,6 +32,7 @@ function Form(){
         </form>
         </div> 
     )
+    }
 }
 
 export default Form;

@@ -20,12 +20,13 @@ function Footer() {
                         <p>toimisto@trok.fi</p>
                         <p>Y-tunnus: 2675325-4</p>
 
-                        <div className="social-logos">
-                        <img src={fblogo}/>
-                        <img src={instalogo}/>
-                        <img src={linktree}/>
-
                         </div>
+
+
+                        <div className="social-logos">
+                        <a target="_blank" href="https://www.facebook.com/trokry"><img src={fblogo} alt="facebook logo"/></a>
+                        <a target="_blank" href="https://www.instagram.com/trokry/"><img src={instalogo} alt="instagram logo"/></a>
+                        <a target="_blank" href="https://linktr.ee/TROKry"><img src={linktree} alt="linktree logo"/></a>
                         </div>
 
                         

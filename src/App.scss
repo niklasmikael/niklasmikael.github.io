@@ -44,12 +44,14 @@ html, body {
 
 nav {
     
-    
-    //background-color: $main-color;
     background-color: $main-color;
-    color:white;
     font-family: 'Open Sans', sans-serif;
-    box-shadow: 0 0 10px black;;
+    box-shadow: 0 0 10px black;
+
+
+    .hamburger-menu {
+
+    }
 
     
     
@@ -81,35 +83,30 @@ nav {
             cursor: pointer;
             
 
-            &:hover ul {
-                visibility: visible;
-                margin-top: 10px;
-                background-color: $main-color;
-                
-                li {
-                    background-color: $button-color;
-                    box-shadow: 1px 1px black;
-                    // TODO: Menee yrityksille napin päälle, korjaa
-                }
-            }
-
             
 
+            
+            
+            .hidden {
+                display: none;
+                img {
+                    display: none;
+                }
+            }
             
 
             .nav-list-dropdown {
                 position: absolute;
-                background-color: white;
-                top: 4rem;
+                background-color: black;
+                top: 5rem;
                 left: -1rem;
                 width: 12rem;
-                padding: 1rem;
+                padding: .5rem;
                 display: flex;
                 flex-direction: column;
                 gap: .5rem;
-                visibility: hidden;
-                transition: 200ms ease-in-out;
-                box-shadow: 0 0 10px $main-color2;
+                visibility: visible;
+                //box-shadow: 0 0 2px $main-color2;
 
                 li {
                     list-style: none;
@@ -162,6 +159,15 @@ button {
 
 
 // Home page
+
+.heroimg {
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+}
 
 hr {
     margin-top: 5em;
@@ -268,35 +274,11 @@ hr {
 
     
 //  Board-page css for card container
-    .board-cards {
-        /*display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 1.5rem;*/
+    .container .board-cards {
 
         
-
-        .pj {
-            display: flex;
-            justify-content: center;
-        }
-
-        .money {
-            display: flex;
-            justify-content: center;
-        }
-
-        .media-comm {
-            display: flex;
-            justify-content: center;
-        }
-
-        .events {
-            display: flex;
-            justify-content: center;
-        }
-
-        .others {
+        
+        .cards {
             display: flex;
             justify-content: center;
         }
@@ -479,4 +461,77 @@ hr {
     height: 500px;
 }
 
+
+
+@media only screen and (max-width: 1350px) {
+
+
+    .nav-top-logo {
+        display: none;    
+     }
+    
+    
+    nav {   
+        background-color: $main-color;
+        font-family: 'Open Sans', sans-serif;
+        box-shadow: 0 0 10px black;;  
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: none;
+            margin: 0 2rem;
+    
+            .nav-list-item, .nav-list-trok {
+                list-style: none;
+                font-weight: bold;
+                position: relative;
+                padding: 1.5rem 1rem;
+                background-color: $main-color;
+                color: white;
+                box-shadow: none;
+                cursor: pointer;
+                
+    
+                
+    
+                
+                
+                .hidden {
+                    display: none;
+                }
+                
+    
+                .nav-list-dropdown {
+                    position: relative;
+                    background-color: white;
+                    top: 1rem;
+                    left: -1rem;
+                    width: 12rem;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                    visibility: visible;
+                    box-shadow: 0 0 2px $main-color2;
+    
+                    li {
+                        list-style: none;
+                        padding: 0.5rem 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+    
+}
 
