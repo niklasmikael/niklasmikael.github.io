@@ -15,7 +15,7 @@ function Footer() {
 
                         <div className="text">
                         <p>TROK Ry</p>
-                        <p>Joukahaisenkatu 3</p>
+                        <p>Lemminkäisenkatu 30</p>
                         <p>20520, Turku</p>
                         <p>toimisto@trok.fi</p>
                         <p>Y-tunnus: 2675325-4</p>

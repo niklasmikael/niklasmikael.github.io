@@ -41,11 +41,11 @@ const [isActive, setActive] = useState(false);
 
                 
             
-                <img onClick={toggleDrop} className={drop ? "hamburger-menu" : "hidden"} src={hamburger} alt="hamburger menu icon"/>
-                <li className="nav-list-item"><Link to="/">Etusivu</Link></li>
+                <img onClick={toggleDrop} className="hamburger-menu" src={hamburger} alt="hamburger menu icon"/>
+                <li className={drop ? "nav-list-item" : "nav-list-hide"}><Link to="/">Etusivu</Link></li>
 
 
-                <li onClick={toggleClass} className="nav-list-trok"><a>TROK ry</a>
+                <li onClick={toggleClass} className={drop ? "nav-list-trok" : "nav-list-hide"}><a>TROK ry</a>
 
                     <ul className={isActive ? "nav-list-dropdown" : "hidden"}> {/*Toggles dropdown*/}
 
@@ -61,8 +61,8 @@ const [isActive, setActive] = useState(false);
 
 
                 
-                <li className="nav-list-item"><Link to="/yrityksille">Yrityksille</Link></li>
-                <li className="nav-list-item"><Link to="/yhteystiedot">Yhteystiedot</Link></li>
+                <li className={drop ? "nav-list-item" : "nav-list-hide"}><Link to="/yrityksille">Yrityksille</Link></li>
+                <li className={drop ? "nav-list-item" : "nav-list-hide"}><Link to="/yhteystiedot">Yhteystiedot</Link></li>
                 
                
                 

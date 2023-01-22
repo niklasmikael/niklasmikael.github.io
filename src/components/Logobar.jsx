@@ -11,10 +11,15 @@ function Logobar(){
 
         <div className="logobar">
         
+
+        <p>Sponsorilogojen paikka?</p>
+            {/*
             <img width="150" height="120" loading="lazy" src={pro} alt="Pro liiton logo"/>
             <img width="150" height="120" loading="lazy"src={rkl} alt="Rkl logo"/>
             <img width="150" height="120" loading="lazy"src={tuo} alt="Tuo logo"/>
             <img width="150" height="120" loading="lazy"src={amk} alt="Turku amk logo"/>
+
+    */}
 
         </div>
        

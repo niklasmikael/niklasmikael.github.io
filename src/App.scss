@@ -7,23 +7,20 @@ $bg-color-lg: rgb(164, 162, 162);
 $nav-color: black;
 
 
-@font-face {
-    font-family: 'Open Sans';
-    src: url(../monument-font/MonumentExtended-Regular.otf) format('opentype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
 
 
 html, body {
 
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Play', sans-serif;
     color: white;
     background-color: #27292b;
 
     h1, h2 {
             
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Play', sans-serif;
         
     }
 
@@ -45,18 +42,25 @@ html, body {
 nav {
     
     background-color: $main-color;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Play', sans-serif;
     box-shadow: 0 0 10px black;
+    font-weight: bold;
 
 
     .hamburger-menu {
+        display: none;
+    }
 
+    .hidden {
+        display: none;
     }
 
     
     
     a {
         text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
         color: black;
     }
 
@@ -69,11 +73,10 @@ nav {
 
         
 
-       
 
        
 
-        .nav-list-item, .nav-list-trok {
+        .nav-list-item, .nav-list-trok, .nav-list-hide {
             list-style: none;
             font-weight: bold;
             position: relative;
@@ -87,12 +90,7 @@ nav {
 
             
             
-            .hidden {
-                display: none;
-                img {
-                    display: none;
-                }
-            }
+            
             
 
             .nav-list-dropdown {
@@ -136,7 +134,7 @@ button {
 
 }
 
-// Slider-component
+// Logobar
 
 .container {
     .logobar {
@@ -367,7 +365,7 @@ hr {
 
 // Footer
 
-.footer { // Splittaa footer kolmeen osaan, teksti keskelle logot oikealle
+.footer { 
     margin-top: 10em;
     background-color: $main-color;
     bottom: 0;
@@ -386,35 +384,39 @@ hr {
 
         .social-logos {
             padding-left: 10rem;
-            img{
+            img {
                 margin: 1em;
                 width: 50px;
                 height: 50px;
-        }
-        }
-
-
-       
-        
-
-        
-        
-            
-        }
-        
+            }
+        }        
     }
+}
     
 
+// Contact
 
+.container {
+    .contact-info {
+        .contact-office, .contact-invoice {
+            border-radius: 5px;
+            border-style: solid;
+            border-color: $button-color;
+            box-shadow: 0 0 20px $footer-color;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+    }
+}
 //Yhteydenottolomake
 
 .form {
     margin-top: 3rem;
-    background-color: rgb(44, 43, 43);
-    color: whiteblack;
-    border-radius: .5rem;
-    border-width: 5px;
-    border-color: $main-color;
+    background-color: $footer-color;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: $button-color;
+    box-shadow: 0 0 20px $footer-color;
     
     
     .form-fields {
@@ -466,36 +468,66 @@ hr {
 @media only screen and (max-width: 1350px) {
 
 
-    .nav-top-logo {
-        display: none;    
-     }
     
     
+// Mobile navigation
+
     nav {   
-        background-color: $main-color;
+        background-color: none;
         font-family: 'Open Sans', sans-serif;
-        box-shadow: 0 0 10px black;;  
+        box-shadow: 0 0 10px black;
+        display: flex;
+        justify-content: right;
+        
+        
+        
         a {
             text-decoration: none;
             color: white;
+            
+        }
+
+        .hamburger-menu {
+            
+            margin-left: 6rem;
+            display: block;
+            img {
+                
+                display: block;
+            }
+            
         }
     
         .nav-list {
+            background-color: none;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            text-align: none;
             gap: none;
-            margin: 0 2rem;
+            margin: 0;
+            width: 10rem;
+            
+
+            .nav-list-hide {
+                display: none;
+            }
+
+            .nav-top-logo {
+                display: none;   
+             }
+
+
     
             .nav-list-item, .nav-list-trok {
+                display: flex;
+                flex-direction: column;
                 list-style: none;
                 font-weight: bold;
-                position: relative;
-                padding: 1.5rem 1rem;
+                padding: .25rem .25rem;
                 background-color: $main-color;
                 color: white;
                 box-shadow: none;
+                gap: 0;
                 cursor: pointer;
                 
     
@@ -503,23 +535,23 @@ hr {
     
                 
                 
-                .hidden {
-                    display: none;
-                }
+            
                 
     
                 .nav-list-dropdown {
                     position: relative;
-                    background-color: white;
+                    text-align: left;
+                    background-color: $main-color;
                     top: 1rem;
                     left: -1rem;
-                    width: 12rem;
-                    padding: 1rem;
+                    width: 6rem;
+                    margin-top: .2rem;
+                    padding: 0;
                     display: flex;
                     flex-direction: column;
-                    gap: .5rem;
+                    gap: 0;
                     visibility: visible;
-                    box-shadow: 0 0 2px $main-color2;
+                    box-shadow: none;
     
                     li {
                         list-style: none;
@@ -530,8 +562,232 @@ hr {
         }
     }
 
+
+
+
+// Mobile home page
+
+
+.heroimg {
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+}
+
+hr {
+    margin-top: 5em;
+    width: 100%;
+    color: white;
+    size: 50px;
+    box-shadow: 0 0 10px $footer-color;
+    
+}
+
+.container {
+
+    .info-img {
+        display: none;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+
+        .info-text {
+            
+            margin-top: 5em;
+            width: 20rem;
+        }
+
+        .info-text-left {
+            text-align: left;
+        }
+        .info-text-right {
+            text-align: left;
+        }
+
+        .info-img {
+            margin-top: 5rem;
+        }
+
+        .left-img {
+            margin-right: 2rem;
+        }
+        .right-img {
+            margin-left: 2rem;
+        }
+    }
+
+    button a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+// Board mobile
+
+.container .board-cards {
+
+        
+        
+    .cards {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+}
+
+
+// Company mobile
+
+.companies {
+
+    display: flex;
+    justify-content: center;
+
+.company-text {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 16px;
+    width: 80vw;
+}
+}
+
+
+.container-company {
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+    .company-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5rem;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: $button-color;
+        box-shadow: 0 0 20px $footer-color;
+        width: 20rem;
+
+        .companycard-title {
+            margin-top: 2rem;
+            height: 3em;
+        }
+
+        .description {
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
+            margin-top: 2rem;
+            height: fit-content;
+        }
+
+        .cta-button {
+            margin-top: 1rem;
+            padding-bottom: 2rem;
+        }
+
+    }
+}
+
+//Contact-form mobile
+
+.form {
+    margin-top: 3rem;
+    background-color: $footer-color;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: $button-color;
+    box-shadow: 0 0 20px $footer-color;
+    
+    
+    .form-fields {
+        display: flex;
+        flex-direction: column;
+        padding: 3em;
+        
+        
+
+        #input-name ,#input-subject, #input-email, #input-message, #contact-submit{
+            padding: .5rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+            
+            
+        }
+
+        #input-message {
+            width: 225px;
+            height: 132px;
+        }
+
+        button {
+            width: 50%;
+            align-self: center;
+        }
+
+        
+
+        
+
+       
+        
+        
+    }
+}
+
+// Footer mobile
+
+.footer { 
+    margin-top: 10em;
+    background-color: $main-color;
+    bottom: 0;
+    position: relative;
+    color: white;
+    
     
 
+    .footer-content {
+        
+
+        .footer-address {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-logos {
+            padding-left: 0;
+            display: flex;
+            flex-direction: row;
+
+            a {
+                height: 40px;
+            }
+            img {
+                margin: 1em;
+                width: 30px;
+                height: 30px;
+            }
+        }        
+    }
+}
+
+
+
+
+
+
+
     
+
 }
 
