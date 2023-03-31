@@ -1,7 +1,6 @@
 import React from 'react';
 import helmet from '../images/trok-logo-helmet.png'
 import { Link } from "react-router-dom";
-import Logobar from "../components/Logobar"
 import clouds from "../images/trok-clouds.png"
 
 
@@ -20,7 +19,7 @@ function Home() {
         <div>
 
         <div className='heroimg'>
-            <img src={clouds} alt="picture of trok ry members"/>
+            <img src={clouds} alt="trok members"/>
         </div>
         
         <div className="container"> 
@@ -39,7 +38,7 @@ function Home() {
                     </div>
 
                     <div className='info-img right-img'>
-                      <img src={helmet} alt="picture of a helmet"/>
+                      <img src={helmet} alt="elmet"/>
                     </div>
 
                 </div>
@@ -50,13 +49,15 @@ function Home() {
                 <div className='info'>
 
                     <div className='info-img left-img'>
-                        <img src={helmet} alt="picture of a helmet"/>
+                        <img src={helmet} alt="helmet"/>
                     </div>
 
                     <div className='info-text info-text-right'>
                         <h2>Jäseneksi liittyminen</h2>
-                        <p>Jäseneksi liittymisen hyötyjä ovat mm. tämä ja tämä</p>
-                        <button><a target="_blank" href="https://kide.app/memberships/2b9e77bc-5f47-4b24-9497-b76ae5bf6bb6">Liity jäseneksi</a></button>
+                        <p>
+                        TROK ry:n jäseneksi voivat liittyä kaikki Turun AMK:n rakennusalan opiskelijat, mukaan lukien polku- ja vaihto-opiskelijat.
+                        </p>
+                        <button><Link to="/jasen">Lue lisää jäsenyydestä</Link></button>
                     </div>
 
 
@@ -64,8 +65,7 @@ function Home() {
                 </div>
                 
                 <hr />
-
-                <Logobar />
+    {/*
 
                 <hr />
                 
@@ -73,7 +73,7 @@ function Home() {
 
                
 
-            {/*Facebook embed
+            Facebook embed
 
                 
                 <div className='facebook-feed instagram-feed'>

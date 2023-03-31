@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,6 +11,7 @@ import Office from "./pages/Office";
 import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
 import Company from "./pages/Company";
+import Member from "./pages/Member";
 
 
 
@@ -29,6 +29,7 @@ export default function App() {
           <Route path="toimisto" element={<Office />} />
           <Route path="yrityksille" element={<Company />} />
           <Route path="yhteystiedot" element={<Contact />} />
+          <Route path="jasen" element={<Member />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

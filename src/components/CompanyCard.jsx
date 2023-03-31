@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CompanyCard({title, desc, cta }) {
 
@@ -16,7 +17,7 @@ function CompanyCard({title, desc, cta }) {
                 <p>{desc}</p>     
             </div>
 
-            { cta == ''
+            { cta === ''
 
             ?
 
@@ -25,7 +26,7 @@ function CompanyCard({title, desc, cta }) {
             :
             
             <div className="cta-button">
-                <button><a>{cta}</a></button>
+                <Link to="/yhteystiedot"><button>{cta}</button></Link>
             </div>
 
             }

@@ -255,6 +255,11 @@ hr {
   padding-bottom: 2rem;
 }
 
+.container-company .company-cards .cta-button a button {
+  font-weight: bold;
+  font-family: 'Play', sans-serif;
+}
+
 .container .board-cards .cards {
   display: -webkit-box;
   display: -ms-flexbox;

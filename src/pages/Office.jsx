@@ -26,7 +26,7 @@ function Office() {
     const [data,setData]=useState([]);
     // API call to server to fetch office schedule
     const getData = () => {
-        fetch(`http://localhost:3000/api/getOne/${week}`,
+        fetch(`http://my.trok.fi/api/getOne/${week}`,
         {
             headers: {
                 'Content-Type': 'application/json',

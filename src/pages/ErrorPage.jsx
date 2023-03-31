@@ -2,7 +2,11 @@ import React from 'react';
 
 function ErrorPage() {
     return(
-        <h1>Error, page not found</h1>
+
+        <div>   
+            <h1>Virheellinen osoite</h1>
+            <a href="#"><button>Palaa etusivulle</button></a>
+        </div>
     )
 }
 
