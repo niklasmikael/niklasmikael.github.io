@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Time from "../components/Times";
+
 
 
 
@@ -26,7 +26,7 @@ function Office() {
     const [data,setData]=useState([]);
     // API call to server to fetch office schedule
     const getData = () => {
-        fetch(`http://my.trok.fi/api/getOne/${week}`,
+        fetch(`https://my.trok.fi/api/getOne/${week}`,
         {
             headers: {
                 'Content-Type': 'application/json',
@@ -44,14 +44,12 @@ function Office() {
         });
             
         }
-    // Store schedule to a variable
-    useEffect(()=>{
 
-        getData()
-        
-        },[])
+        useEffect(() => {
+            getData();
+          }, []);
 
-
+    
 
     return (
         <div className="container">

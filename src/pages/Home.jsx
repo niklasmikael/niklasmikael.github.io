@@ -38,7 +38,7 @@ function Home() {
                     </div>
 
                     <div className='info-img right-img'>
-                      <img src={helmet} alt="elmet"/>
+                      <img src={helmet} alt="helmet"/>
                     </div>
 
                 </div>

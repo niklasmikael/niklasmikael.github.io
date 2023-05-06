@@ -10,7 +10,7 @@ function Board() {
     const [board,setBoard]=useState([]);
     // API call to server to fetch office schedule
     const getBoard = () => {
-        fetch(`http://my.trok.fi/api/get/board`,
+        fetch(`https://my.trok.fi/api/get/board`,
         {
             headers: {
                 'Content-Type': 'application/json',
@@ -28,19 +28,14 @@ function Board() {
         });
             
         }
-    // Store schedule to a variable
-    useEffect(()=>{
 
-        getBoard()
+
+        useEffect(() => {
+            getBoard();
+          }, []);
+  
+
         
-        },[])
-
-
-
-
-
-
-
 
 
     return(
@@ -62,7 +57,7 @@ function Board() {
                     {
                     board.map((item, i) => {
 
-                        if (board[i].title !== 'Puheenjohtaja' || board[i].title !== 'Varapuheenjohtaja' ) {
+                        if (board[i].title === 'Puheenjohtaja' || board[i].title === 'Varapuheenjohtaja' ) {
                         
                             return (
                             
@@ -86,7 +81,7 @@ function Board() {
                 {
                     board.map((item, i) => {
 
-                        if (board[i].boardDepartment === 'Media ja viestintä') {
+                        if (board[i].title !== 'Puheenjohtaja' && board[i].title !== 'Varapuheenjohtaja' ) {
                         
                             return (
                             

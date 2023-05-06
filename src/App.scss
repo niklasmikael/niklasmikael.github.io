@@ -285,6 +285,7 @@ hr {
         .cards {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         
     }
@@ -519,7 +520,8 @@ hr {
             }
 
             .nav-top-logo {
-                display: none;   
+                display: none;
+                
              }
 
 
