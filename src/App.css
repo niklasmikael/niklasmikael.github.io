@@ -63,8 +63,8 @@ nav .nav-list .nav-list-item, nav .nav-list .nav-list-trok, nav .nav-list .nav-l
   position: relative;
   padding: 1.5rem 1rem;
   background-color: #d0fc31;
-  -webkit-box-shadow: 2px 2px 3px 2px green;
-          box-shadow: 2px 2px 3px 2px green;
+  -webkit-box-shadow: 2px 2px 3px 2px #d0fc31;
+          box-shadow: 2px 2px 3px 2px #d0fc31;
   cursor: pointer;
 }
 
