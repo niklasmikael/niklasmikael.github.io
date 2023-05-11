@@ -14,7 +14,7 @@ function Footer() {
                     <div className="footer-address">
 
                         <div className="text">
-                            <p>TROK Ry</p>
+                            <p>TROK ry</p>
                             <p>Lemminkäisenkatu 30</p>
                             <p>20520, Turku</p>
                             <p>toimisto@trok.fi</p>

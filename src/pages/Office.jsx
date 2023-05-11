@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import _ from 'lodash';
 
 
 
@@ -35,12 +36,25 @@ function Office() {
         }
         )
         .then(function(response){
-            console.log(response)
+            
             return response.json();
         })
         .then(function(myJson) {
-            console.log(myJson)
-            setData(myJson);
+
+            if (_.isEmpty(myJson)) {
+                setData({
+                    "monday": "-",
+                    "tuesday": "-",
+                    "wednesday": "-",
+                    "thursday": "-",
+                    "friday": "-",
+                    "info": "-",
+                })
+            } else {
+                setData(myJson);
+            }
+            
+            
         });
             
         }
@@ -54,7 +68,7 @@ function Office() {
     return (
         <div className="container">
 
-            <p>TROKin toimisto sijaitsee Lemminkäisenkadun kampuksella tilassa LEM_B013. Päivitämme jokaisen viikon aukioloajat somekanavissamme enne jokaisen viikon alkua.</p>
+            <p>TROKin toimisto sijaitsee Lemminkäisenkadun kampuksella tilassa LEM_B013. Päivitämme jokaisen viikon aukioloajat somekanavissamme ennen jokaisen viikon alkua.</p>
             <p>Tervetuloa oleskelemaan toimistolle kahvikupposen kanssa oven ollessa auki!</p>
             <p>Toimisto toimii kaikille opiskelijoille päivystysaikana ajanviettopaikkana sekä jäsenpalvelupisteenä.</p>
             <p>Toimistolla voitte kavereiden kanssa ottaa luentojen välissä kupin kahvia, tehdä koulutöitä tai muuten vaan hengailla hallituslaisten kanssa.</p>
