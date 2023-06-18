@@ -41,7 +41,7 @@ const [isActive, setActive] = useState(false);
 
 
                 <li onClick={toggleDrop} className={drop ? "nav-list-item" : "nav-list-hide"}><Link to="/">Etusivu</Link></li>
-                <li onClick={toggleClass} className={drop ? "nav-list-trok" : "nav-list-hide"}><Link to="#">Trok ry</Link>
+                <li onClick={toggleClass} className={drop ? "nav-list-trok" : "nav-list-hide"}><Link to="#">TROK ry</Link>
 
                     <ul onClick={toggleClass} className={isActive ? "nav-list-dropdown" : "hidden"}> {/*Toggles dropdown*/}
 
