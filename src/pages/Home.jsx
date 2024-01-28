@@ -1,7 +1,7 @@
 import React from 'react';
 import helmet from '../images/trok-logo-helmet.png'
 import { Link } from "react-router-dom";
-import clouds from "../images/trok-clouds.png"
+import clouds from "../images/trok-banneri.png"
 
 
 function Home() {
