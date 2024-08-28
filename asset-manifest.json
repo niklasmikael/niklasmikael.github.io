@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/niklasmikael.github.io/static/css/main.208d5a08.css",
+    "main.js": "/niklasmikael.github.io/static/js/main.7d078225.js",
+    "static/js/787.6b42f781.chunk.js": "/niklasmikael.github.io/static/js/787.6b42f781.chunk.js",
+    "static/media/trok-banneri.png": "/niklasmikael.github.io/static/media/trok-banneri.92081e1420269450378b.png",
+    "static/media/insta-logo.png": "/niklasmikael.github.io/static/media/insta-logo.0b7fd6c2e8ee13db450a.png",
+    "static/media/fb-logo.png": "/niklasmikael.github.io/static/media/fb-logo.2d6c4ff3d7afdd8cce90.png",
+    "static/media/trok-logo-white.png": "/niklasmikael.github.io/static/media/trok-logo-white.c84970ef9efbcf3e51e2.png",
+    "index.html": "/niklasmikael.github.io/index.html",
+    "main.208d5a08.css.map": "/niklasmikael.github.io/static/css/main.208d5a08.css.map",
+    "main.7d078225.js.map": "/niklasmikael.github.io/static/js/main.7d078225.js.map",
+    "787.6b42f781.chunk.js.map": "/niklasmikael.github.io/static/js/787.6b42f781.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.208d5a08.css",
+    "static/js/main.7d078225.js"
+  ]
+}
